@@ -472,7 +472,7 @@ spec:
       {{- else }}
       # Will mount configuration files as www-data (id: 33) for nextcloud
       securityContext:
-        fsGroup: 33
+        #fsGroup: 33
         {{- if .Values.securityContext }}
         {{- with .Values.securityContext }}
         {{- toYaml . | nindent 8 }}
